@@ -1,0 +1,18 @@
+[project]
+name = "ayon-traypublisher"
+description = "AYON Traypublisher addon."
+dynamic = ["version"]
+requires-python = ">=3.9"
+dependencies = [
+    "ayon-core",
+    "ayon-python-api",
+    "clique",
+    "opentimelineio",
+    "qtawesome",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "ayon_traypublisher.version.__version__" }
+
+[tool.uv.sources]
+ayon-core = { git = "https://github.com/ynput/ayon-core", subdirectory = "client" }
